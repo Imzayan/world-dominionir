@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: world-dominion-online
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: world-dominion-db
+          property: connectionString
+
+databases:
+  - name: world-dominion-db
+    plan: free

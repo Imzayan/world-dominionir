@@ -1,0 +1,22 @@
+{
+  "name": "world-dominion-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile-first online world strategy game with accounts, multiplayer, alliances, realtime chat and server-authoritative battles.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "socket.io": "^4.8.1"
+  }
+}
